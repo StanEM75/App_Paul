@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Configuration de la mise en page (doit être la première commande)
+# Configuration de la mise en page
 st.set_page_config(layout="wide")  # Largeur totale de la page
 
 # Ajouter du CSS personnalisé pour définir le fond de la page
@@ -59,9 +59,9 @@ st.markdown(
 # Ajouter un espace entre le texte et les blocs
 st.markdown("<br><br>", unsafe_allow_html=True)  # Ajoute deux sauts de ligne pour espacer
 
-# Blocs rectangulaires espacés et plus longs avec la nouvelle couleur
+# Blocs rectangulaires espacés employeurs et employés
 with st.container():
-    col1, _, col2, _ = st.columns([2, 1, 2, 1])  # Les blocs (40%) sont séparés par des espaces vides
+    _, col1, _, col2, _ = st.columns([1, 3, 1, 3, 1])  # Les blocs (40%) sont séparés par des espaces vides
 
     with col1:
         st.markdown(
@@ -86,9 +86,15 @@ with st.container():
 # Ajouter plus d'espace avant le bas du bloc
 st.markdown("<br><br><br>", unsafe_allow_html=True)  # Ajoute plus de sauts de ligne
 
+# Ligne de séparation
+st.markdown("<hr style='border: 1px solid #eee;'>", unsafe_allow_html=True)
+
+# Ajouter un espace entre le texte et les blocs
+st.markdown("<br><br>", unsafe_allow_html=True)  # Ajoute des sauts de ligne pour espacer
+
 # Bloc inférieur avec "Season" et les logos sociaux
 with st.container():
-    col1, col2, col3 = st.columns([2, 1, 2])  # 40% chacun
+    _, col1, _, col2, _, col3 = st.columns([2, 2, 1, 2, 1, 2])  # 40% chacun
 
     with col1:
         st.markdown(
